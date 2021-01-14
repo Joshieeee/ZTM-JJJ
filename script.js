@@ -5,13 +5,11 @@ var randomHike = "";
 var userLat = 0;
 var userLng = 0;
 
-var x = document.getElementById("demo");
-
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+        alert("Geolocation is not supported by this browser.");
     }
 }
 
@@ -25,6 +23,7 @@ function showPosition(position) {
 getLocation();
 
 function createMap() {
+
     map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: userLat,
@@ -63,11 +62,18 @@ function randomTrail() {
 }
 
 function createMarker(place) {
+
+    var hikingIcon = {
+        url: 'https://www.campgroundsigns.com/img/lg/X/mutcd-campground-guide-sign-hiking-trail-x-rs-068.png',
+        scaledSize: new google.maps.Size(25,25)
+    }
+
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
         map: map,
         position: place.geometry.location,
-        title: place.name
+        title: place.name,
+        icon: hikingIcon
     })
 }
 
