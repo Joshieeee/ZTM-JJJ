@@ -1,26 +1,8 @@
 #map {
-    height: 400px;
+	position: absolute: bottom;
+    height: 300px;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-#hikeButton {
-    margin-bottom: 20px;
-    font-size: 20px;
-    height: 50px;
-}
-
-#hikingTrail {
-    height: 50px;
-    font-size: 20px;
-    width: 500px;
-}
-
-#enterRadius {
-    display: inline-block;
-}
-
-#searchRadius {
-    display: inline;
-}
