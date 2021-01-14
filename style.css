@@ -4,3 +4,11 @@
     margin: 0;
     padding: 0;
 }
+
+#hikeButton {
+    margin-bottom: 20px;
+}
+
+#demo {
+    height: 100px;
+}

@@ -11,12 +11,17 @@
 <body>
 
     <h1>Let's Go Hiking!</h1>
+
     <button id="hikeButton">Tell me where to hike!</button>
-    <input type="text" disabled>
+
+    <input id="hikingTrail" type="text" disabled>
+
+    <p id="demo"></p>
+
     <div id="map"></div>
 
     <script defer async 
-        src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places&callback=createMap">
+        src="https://maps.googleapis.com/maps/api/js?key=INSERT_API_HERE&libraries=places&callback=createMap">
         </script>
         
         <script src="script.js"></script>
